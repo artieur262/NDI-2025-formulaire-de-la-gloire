@@ -1,3 +1,12 @@
+#petit_renard div {
+  display: none;
+  position: absolute;
+}
+#petit_renard:hover div {
+  display: block;
+}
+
+
 .overlay {
   position: fixed;
   top: 0;
