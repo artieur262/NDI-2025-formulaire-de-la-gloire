@@ -6,6 +6,17 @@
   display: block;
 }
 
+#spider-wave img {
+  width: 100px;
+  height: auto;
+  animation: wave 2s infinite;
+}
+
+#spider-wave {
+  display: flex;
+  display: none;
+}
+
 .overlay {
   position: fixed;
   top: 0;
