@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="index.css" />
   </head>
 
-
   <header>
     <nav>
       <ul>
@@ -17,20 +16,60 @@
 
   <body>
     <video id="bg-video" autoplay loop muted playsinline>
-        <source src="img/BG_TRANS.mp4" type="video/mp4" />
+      <source src="img/BG_TRANS.mp4" type="video/mp4" />
     </video>
     <div id="video-overlay" aria-hidden="true"></div>
 
-    <a href="#popup">Valider</a>
+    <button><a href="#pop1">Valider</a></button>
 
-    <div id="popup" class="overlay">
+    <div id="pop1" class="overlay">
       <div class="popup">
-        <a href="#" class="close">&times;</a>
-        <h2>Gloire</h2>
-        <p id="Gagner">
-          Vous avez gagné ! <br />
-          Nous sommes fier de vous !
-        </p>
+        <p>Vous êtes sûr de valider ?</p>
+        <div class="buttons">
+          <a href="#pop2">Oui</a>
+          <a href="#">Non</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop2" class="overlay">
+      <div class="popup">
+        <p>Vous êtes vraiment sûr de valider ?</p>
+        <div class="buttons">
+          <a href="#pop3">Oui</a>
+          <a href="#">Non</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop3" class="overlay">
+      <div class="popup">
+        <p>Vous êtes vraiment vraiment sûr de valider ?</p>
+        <div class="buttons">
+          <a href="#pop4">Oui</a>
+          <a href="#">Non</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop4" class="overlay">
+      <div class="popup">
+        <p>Vous êtes vraiment vraiment vraiment sûr de valider ?</p>
+        <div class="buttons">
+          <a href="#pop5">Oui</a>
+          <a href="#">Non</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop5" class="overlay">
+      <div class="popup">
+        <p>Vous êtes vraiment vraiment vraiment vraiment sûr de valider ?</p>
+        <div class="buttons">
+          <!-- ici soit on boucle, soit on arrête -->
+          <a href="#">Oui</a>
+          <a href="#">Non</a>
+        </div>
       </div>
     </div>
 

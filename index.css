@@ -6,25 +6,6 @@
   display: block;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  visibility: visible;
-}
-
-.overlay:not(:target) {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .popup {
   background: #fff;
   padding: 20px;
@@ -41,22 +22,6 @@
   text-decoration: none;
   font-size: 24px;
   color: #333;
-}
-
-#Gagner {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(
-    left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
 }
 
 /* background video */
@@ -81,4 +46,56 @@
   background: rgba(0, 0, 0, 0.25);
   z-index: -1;
   pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 80%;
+  border-radius: 8px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.buttons a {
+  padding: 8px 16px;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
 }
