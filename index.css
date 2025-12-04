@@ -45,7 +45,6 @@
 }
 
 #Gagner{
-    position: absolute;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
