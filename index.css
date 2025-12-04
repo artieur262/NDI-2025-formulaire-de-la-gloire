@@ -1,7 +1,43 @@
-#petit_renard div {
-  display: none;
-  position: absolute;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
 }
-#petit_renard:hover div {
-  display: block;
+
+.overlay:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 80%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+}
+
+#Gagner{
+    position: absolute;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
 }

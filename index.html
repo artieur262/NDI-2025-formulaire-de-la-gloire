@@ -15,7 +15,18 @@
   </header>
 
   <body>
+    <a href="#popup">Ouvrir la popup</a>
+
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <a href="#" class="close">&times;</a>
+        <h2>Gloire</h2>
+        <p id="Gagner">Vous avez gagné ! <br> Nous sommes fier de vous !</p> 
+      </div>
+    </div>
+
     <h1>Formulaire de la gloire</h1>
+
     <form action="submit_form" method="post">
       <label for="name">Nom:</label>
       <input type="text" id="name" name="name" required /><br /><br />
