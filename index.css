@@ -10,7 +10,6 @@
 }
 
 #spider-wave > div {
-  /* conteneur plus grand pour une spirale très espacée */
   position: absolute;
   width: 100%;
   height: 0px;
@@ -37,16 +36,15 @@
   display: block;
   opacity: 1;
 }
+
 #spider-wave img:nth-child(n) {
   z-index: n;
 }
+
 #spider-wave img:nth-child(9n + 1) {
-  /* première image plus à droite (rayon augmenté) */
   transform: translate(-50%, -50%) rotate(0deg) translate(110px) rotate(0deg);
 }
 
-/* positions en spirale via nth-child : angle croissant + rayon décroissant */
-/* positions en spirale : augmenter les rayons pour espacer les images */
 #spider-wave img:nth-child(9n + 2) {
   transform: translate(-50%, -50%) rotate(45deg) translate(110px) rotate(-45deg);
 }
@@ -83,13 +81,7 @@
     rotate(-360deg);
 }
 
-/* reveal: au survol de l'image afficher l'image suivante de la spirale */
-#spider-wave img:hover + img {
-  display: block;
-  opacity: 1;
-}
-
-/* garder l'image survolée visible */
+#spider-wave img:hover + img,
 #spider-wave img:hover {
   display: block;
   opacity: 1;
@@ -138,7 +130,6 @@
   pointer-events: none;
 }
 
-/* optional dim overlay so content stays readable */
 #video-overlay {
   position: fixed;
   inset: 0;
@@ -172,7 +163,7 @@
 }
 
 .buttons a.btn-oui {
-  background: #db3434; /* rouge */
+  background: #db3434;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -180,7 +171,7 @@
 }
 
 .buttons a.btn-non {
-  background: #34db3c; /* vert */
+  background: #34db3c;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -274,7 +265,7 @@ form button[type="submit"] a {
 
 form {
   position: relative;
-  background: rgba(255, 255, 255, 0.95); /* fond semi-transparent */
+  background: rgba(255, 255, 255, 0.75);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
