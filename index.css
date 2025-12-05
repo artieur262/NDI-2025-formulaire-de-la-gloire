@@ -22,7 +22,7 @@
   height: 80px;
   object-fit: cover;
   position: absolute;
-  /* top: 50%; */
+  top: 60px;
   right: 60px;
   transform-origin: center center;
   display: none;
@@ -63,6 +63,28 @@
   transform: translate(-50%, -50%) rotate(180deg) translate(110px)
     rotate(-180deg);
   z-index: 5;
+}
+
+#spider-wave img:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(225deg) translate(110px)
+    rotate(-225deg);
+  z-index: 6;
+}
+#spider-wave img:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(270deg) translate(110px)
+    rotate(-270deg);
+  z-index: 7;
+}
+#spider-wave img:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(315deg) translate(110px)
+    rotate(-315deg);
+  z-index: 8;
+}
+
+#spider-wave img:nth-child(9) {
+  transform: translate(-50%, -50%) rotate(360deg) translate(110px)
+    rotate(-360deg);
+  z-index: 9;
 }
 
 /* reveal: au survol de l'image afficher l'image suivante de la spirale */
