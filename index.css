@@ -7,6 +7,7 @@
 }
 #spider-wave {
   position: relative;
+  display: none;
 }
 
 #spider-wave > div {
