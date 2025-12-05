@@ -21,16 +21,17 @@
   height: 80px;
   object-fit: cover;
   position: absolute;
-  top: 80px;
+  top: 130px;
   right: 60px;
   transform-origin: center center;
   display: none;
   opacity: 0;
   transition: opacity 250ms ease-in-out, transform 350ms ease;
   cursor: pointer;
+}
+img {
   border-radius: 15px;
 }
-
 /* première image visible et placée à droite */
 #spider-wave img:first-child {
   display: block;
