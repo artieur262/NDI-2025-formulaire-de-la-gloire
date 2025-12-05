@@ -22,7 +22,7 @@
   height: 80px;
   object-fit: cover;
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 60px;
   transform-origin: center center;
   display: none;
@@ -36,55 +36,52 @@
 #spider-wave img:first-child {
   display: block;
   opacity: 1;
-  z-index: 1;
+}
+#spider-wave img:nth-child(n) {
+   z-index: n;
+}
+#spider-wave img:nth-child(9n + 1) {
+ 
   /* première image plus à droite (rayon augmenté) */
   transform: translate(-50%, -50%) rotate(0deg) translate(110px) rotate(0deg);
 }
 
 /* positions en spirale via nth-child : angle croissant + rayon décroissant */
 /* positions en spirale : augmenter les rayons pour espacer les images */
-#spider-wave img:nth-child(2) {
+#spider-wave img:nth-child(9n + 2) {
   transform: translate(-50%, -50%) rotate(45deg) translate(110px) rotate(-45deg);
-  z-index: 2;
 }
 
-#spider-wave img:nth-child(3) {
+#spider-wave img:nth-child(9n + 3) {
   transform: translate(-50%, -50%) rotate(90deg) translate(110px) rotate(-90deg);
-  z-index: 3;
 }
 
-#spider-wave img:nth-child(4) {
+#spider-wave img:nth-child(9n + 4) {
   transform: translate(-50%, -50%) rotate(135deg) translate(110px)
     rotate(-135deg);
-  z-index: 4;
 }
 
-#spider-wave img:nth-child(5) {
+#spider-wave img:nth-child(9n + 5) {
   transform: translate(-50%, -50%) rotate(180deg) translate(110px)
     rotate(-180deg);
-  z-index: 5;
 }
 
-#spider-wave img:nth-child(6) {
+#spider-wave img:nth-child(9n + 6) {
   transform: translate(-50%, -50%) rotate(225deg) translate(110px)
     rotate(-225deg);
-  z-index: 6;
 }
-#spider-wave img:nth-child(7) {
+#spider-wave img:nth-child(9n + 7) {
   transform: translate(-50%, -50%) rotate(270deg) translate(110px)
     rotate(-270deg);
-  z-index: 7;
 }
-#spider-wave img:nth-child(8) {
+#spider-wave img:nth-child(9n + 8) {
   transform: translate(-50%, -50%) rotate(315deg) translate(110px)
     rotate(-315deg);
-  z-index: 8;
 }
 
-#spider-wave img:nth-child(9) {
+#spider-wave img:nth-child(9n) {
   transform: translate(-50%, -50%) rotate(360deg) translate(110px)
     rotate(-360deg);
-  z-index: 9;
 }
 
 /* reveal: au survol de l'image afficher l'image suivante de la spirale */
