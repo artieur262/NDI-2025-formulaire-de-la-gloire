@@ -6,15 +6,71 @@
   display: block;
 }
 
-#spider-wave img {
-  width: 100px;
-  height: auto;
-  animation: wave 2s infinite;
+#spider-wave {
+  /* conteneur plus grand pour une spirale très espacée */
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  margin: 20px auto;
 }
 
-#spider-wave {
-  display: flex;
+#spider-wave img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
   display: none;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, transform 350ms ease;
+  cursor: pointer;
+}
+
+/* première image visible et placée à droite */
+#spider-wave img:first-child {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  /* première image plus à droite (rayon augmenté) */
+  transform: translate(-50%, -50%) rotate(0deg) translate(280px) rotate(0deg);
+}
+
+/* positions en spirale via nth-child : angle croissant + rayon décroissant */
+/* positions en spirale : augmenter les rayons pour espacer les images */
+#spider-wave img:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg) translate(220px) rotate(-45deg);
+  z-index: 2;
+}
+
+#spider-wave img:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(90deg) translate(220px) rotate(-90deg);
+  z-index: 3;
+}
+
+#spider-wave img:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(135deg) translate(220px)
+    rotate(-135deg);
+  z-index: 4;
+}
+
+#spider-wave img:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(180deg) translate(220px)
+    rotate(-180deg);
+  z-index: 5;
+}
+
+/* reveal: au survol de l'image afficher l'image suivante de la spirale */
+#spider-wave img:hover + img {
+  display: block;
+  opacity: 1;
+}
+
+/* garder l'image survolée visible */
+#spider-wave img:hover {
+  display: block;
+  opacity: 1;
 }
 
 .overlay {
@@ -88,7 +144,6 @@
   visibility: visible;
 }
 
-
 .overlay:not(:target) {
   opacity: 0;
   visibility: hidden;
@@ -111,7 +166,7 @@
 }
 
 .buttons a.btn-oui {
-  background: #db3434;  /* rouge */
+  background: #db3434; /* rouge */
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -119,7 +174,7 @@
 }
 
 .buttons a.btn-non {
-  background: #34db3c;  /* vert */
+  background: #34db3c; /* vert */
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
@@ -151,14 +206,13 @@
   );
 }
 
-
 #petit_renard .popup {
-  background: none;      
-  padding: 0;           
-  width: auto;         
-  max-width: none;      
-  border-radius: 0;    
-  box-shadow: none;      
+  background: none;
+  padding: 0;
+  width: auto;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 #petit_renard img {
@@ -167,7 +221,7 @@
 }
 
 #petit_renard .close {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   width: 30px;
   height: 30px;
