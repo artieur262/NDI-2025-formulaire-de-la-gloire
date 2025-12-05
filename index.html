@@ -207,28 +207,30 @@
       </div>
     </div>
 
-    <h1>Formulaire de la gloire</h1>
+    
+    <div>
+      <h1>Formulaire de la gloire</h1>
+      <form action="submit_form" method="post">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
 
-    <form action="submit_form" method="post">
-      <label for="name">Nom:</label>
-      <input type="text" id="name" name="name" required /><br /><br />
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required /><br /><br />
 
-      <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required /><br /><br />
+        <label for="subject">sujet:</label>
+        <input type="text" id="subject" name="subject" required /><br /><br />
 
-      <label for="subject">sujet:</label>
-      <input type="text" id="subject" name="subject" required /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" required></textarea><br /><br />
 
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" required></textarea><br /><br />
-
-      <button type="submit">
-        <a href="#pop1">Valider</a>
-      </button>
-    </form>
+        <button type="submit">
+          <a href="#pop1">Valider</a>
+        </button>
+      </form>
+    </div>
   </body>
 
   <footer>
