@@ -18,12 +18,12 @@
 }
 
 #spider-wave img {
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  right: 60px;
   transform-origin: center center;
   display: none;
   opacity: 0;
@@ -38,29 +38,29 @@
   opacity: 1;
   z-index: 1;
   /* première image plus à droite (rayon augmenté) */
-  transform: translate(-50%, -50%) rotate(0deg) translate(220px) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg) translate(110px) rotate(0deg);
 }
 
 /* positions en spirale via nth-child : angle croissant + rayon décroissant */
 /* positions en spirale : augmenter les rayons pour espacer les images */
 #spider-wave img:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg) translate(220px) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(45deg) translate(110px) rotate(-45deg);
   z-index: 2;
 }
 
 #spider-wave img:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(90deg) translate(220px) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(90deg) translate(110px) rotate(-90deg);
   z-index: 3;
 }
 
 #spider-wave img:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(135deg) translate(220px)
+  transform: translate(-50%, -50%) rotate(135deg) translate(110px)
     rotate(-135deg);
   z-index: 4;
 }
 
 #spider-wave img:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(180deg) translate(220px)
+  transform: translate(-50%, -50%) rotate(180deg) translate(110px)
     rotate(-180deg);
   z-index: 5;
 }
