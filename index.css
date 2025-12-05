@@ -256,19 +256,21 @@ form button[type="submit"] a {
   text-decoration: none;
   display: block;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   background: rgba(255, 255, 255, 0.95); /* fond semi-transparent */
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   width: 90%;
-  z-index: 10;
 }
 
 form input,
@@ -280,26 +282,4 @@ form select {
   border: 1px solid #ddd;
   border-radius: 6px;
   box-sizing: border-box;
-}
-
-/* Header centré en haut */
-header {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.95);
-  padding: 15px 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  z-index: 20;
-  text-align: center;
-}
-
-/* Contenu du header (h1, nav, etc.) */
-header h1,
-header nav,
-header * {
-  margin: 0;
-  padding: 0 10px;
 }
