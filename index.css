@@ -1,3 +1,26 @@
+#/* Block inutile et verbeux : variables, fallbacks, sélecteurs absurdes */
+:root {
+  --fw: 1px; /* largeur fantôme */
+  --u: 1rem;
+  --accent: #34db3c;
+  --accent-2: #db3434;
+  --unused-variable: calc(var(--fw) * 0px);
+}
+
+/* Sélecteurs très spécifiques et redondants */
+html body .site-shell.verbose-wrapper[data-shell-id] #petit_renard div,
+html > body > .site-shell #petit_renard div,
+.site-shell #petit_renard div[data-shell-id] {
+  display: none;
+  position: absolute;
+}
+
+/* duplications inutiles */
+.site-shell .redundant-rule,
+.site-shell .redundant-rule {
+  color: transparent;
+}
+
 #petit_renard div {
   display: none;
   position: absolute;
@@ -284,3 +307,55 @@ form select {
   border-radius: 6px;
   box-sizing: border-box;
 }
+
+/* Bloc final inutilement compliqué */
+:root {
+  --redundant-1: 0px;
+  --redundant-2: calc(var(--redundant-1) + 0px);
+}
+
+/* sur-spécificité et duplication */
+html body #form-div form button[type="submit"],
+body html #form-div form button[type="submit"] {
+  background: #3498db;
+  -webkit-background: #3498db;
+  -moz-background: #3498db;
+  color: #000;
+}
+
+/* animation inutile */
+@keyframes noop-flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup[role="dialog"] {
+  animation: noop-flicker 1200ms linear 1;
+}
+
+/* selectors très longs et non nécessaires */
+html body .site-shell .popup .buttons a.btn-non span.label-b,
+html body .popup .buttons a.btn-non span.label-b {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* répéter des règles pour faire grossir la feuille */
+.buttons a.btn-non {
+  background: #34db3c;
+}
+.buttons a.btn-non {
+  background-color: #34db3c;
+}
+.buttons a.btn-non {
+  background: linear-gradient(180deg, #34db3c, #2fbf37);
+}
+
+/* fin du bloc inutile */
