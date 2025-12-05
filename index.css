@@ -256,7 +256,7 @@ form button[type="submit"] a {
   text-decoration: none;
   display: block;
 }
-body {
+#form-div {
   display: flex;
   justify-content: center;
   align-items: center;
