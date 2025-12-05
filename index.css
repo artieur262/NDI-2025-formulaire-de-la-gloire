@@ -7,16 +7,16 @@
 }
 
 #spider-wave {
-  /* conteneur centré ; place les images autour du centre en spirale */
-  position: relative;
-  width: 320px;
-  height: 320px;
+  /* conteneur plus grand pour une spirale très espacée */
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
   margin: 20px auto;
 }
 
 #spider-wave img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   position: absolute;
   top: 50%;
@@ -24,7 +24,7 @@
   transform-origin: center center;
   display: none;
   opacity: 0;
-  transition: opacity 200ms ease-in-out, transform 300ms ease;
+  transition: opacity 250ms ease-in-out, transform 350ms ease;
   cursor: pointer;
 }
 
@@ -32,31 +32,33 @@
 #spider-wave img:first-child {
   display: block;
   opacity: 1;
-  z-index: 10;
-  transform: translate(-50%, -50%) rotate(0deg) translate(140px) rotate(0deg);
+  z-index: 1;
+  /* première image plus à droite (rayon augmenté) */
+  transform: translate(-50%, -50%) rotate(0deg) translate(280px) rotate(0deg);
 }
 
 /* positions en spirale via nth-child : angle croissant + rayon décroissant */
+/* positions en spirale : augmenter les rayons pour espacer les images */
 #spider-wave img:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg) translate(110px) rotate(-45deg);
-  z-index: 9;
+  transform: translate(-50%, -50%) rotate(45deg) translate(220px) rotate(-45deg);
+  z-index: 2;
 }
 
 #spider-wave img:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(90deg) translate(80px) rotate(-90deg);
-  z-index: 8;
+  transform: translate(-50%, -50%) rotate(90deg) translate(220px) rotate(-90deg);
+  z-index: 3;
 }
 
 #spider-wave img:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(135deg) translate(50px)
+  transform: translate(-50%, -50%) rotate(135deg) translate(220px)
     rotate(-135deg);
-  z-index: 7;
+  z-index: 4;
 }
 
 #spider-wave img:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(180deg) translate(20px)
+  transform: translate(-50%, -50%) rotate(180deg) translate(220px)
     rotate(-180deg);
-  z-index: 6;
+  z-index: 5;
 }
 
 /* reveal: au survol de l'image afficher l'image suivante de la spirale */
