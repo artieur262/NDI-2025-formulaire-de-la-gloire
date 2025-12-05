@@ -118,15 +118,6 @@
   visibility: hidden;
 }
 
-.popup {
-  background: #fff;
-  padding: 20px;
-  max-width: 400px;
-  width: 80%;
-  border-radius: 8px;
-  position: relative;
-}
-
 .close {
   position: absolute;
   top: 8px;
@@ -158,21 +149,6 @@
   background: rgba(0, 0, 0, 0.25);
   z-index: -1;
   pointer-events: none;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  visibility: visible;
-}
-
-.overlay:not(:target) {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .buttons button {
@@ -267,4 +243,21 @@
   max-width: 500px;
   width: 90%;
   min-height: 300px;
+}
+
+form button[type="submit"] {
+  background: #3498db;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form button[type="submit"] a {
+  color: #000;
+  text-decoration: none;
+  display: block;
 }

@@ -46,8 +46,6 @@
       </div>
     </div>
 
-    <a href="#pop1" tabindex="10"><button>Valider</button></a>
-
     <div id="pop1" class="overlay">
       <div class="popup">
         <p class="rainbow-text">Vous êtes sûr de valider ?</p>
@@ -191,7 +189,9 @@
       <label for="message">Message:</label><br />
       <textarea id="message" name="message" required></textarea><br /><br />
 
-      <input type="submit" value="Envoyer" />
+      <button type="submit">
+        <a href="#pop1">Valider</a>
+      </button>
     </form>
   </body>
 
